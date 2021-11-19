@@ -7,23 +7,78 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <!-- External Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- Font-Awesome Library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/df370cadd4.js" crossorigin="anonymous"></script>
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <!-- timeago Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   </head>
 
   <body>
+    <div id="main-page">
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+      <nav>
+      <span class="tweeter">tweeter</span>
+      <div class="write-new-tweet"> <div><b>Write</b> a new tweet </div>
+      <i class="fas fa-angle-double-down"></i></div>
     </nav>
+    <div class="divisible-content"> 
+
+    </div>
+
+    <header class="main-header">
+      <div class="avatar">
+          <img class="img" src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div>
+          <h2 class="name" > <b>Gulbike</b> Biyekenova</h2>
+      </div>
+  </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
-  </body>
+    <main class="container">
+      
+      <section class="new-tweet">
+        <div class="error-messages">
+          <div class="empty-tweet"><i class="fas fa-exclamation-triangle"></i>Cannot post an empty tweet <i class="fas fa-exclamation-triangle"></i></div>
+          <div class="long-tweet"><i class="fas fa-exclamation-triangle"></i>Exceeded maximum character limit of 140<i class="fas fa-exclamation-triangle"></i></div>
+        </div>
+        <form id="add-tweet" method="POST" action="/tweets/">
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about"></textarea>
+          <div class="actions">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="" id="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+
+        <!-- Tweets area content here -->
+        <div id="tweet-container"></div>
+
+      </section>
+    </main>   
+  </div>
+  
+  <script src="./scripts/composer-char-counter.js" > </script>
+</body>
 </html>
