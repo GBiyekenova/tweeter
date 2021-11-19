@@ -1,0 +1,47 @@
+.main-header {
+  height: 400px;
+  width: 100%;
+  background-color: sandybrown;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 4em 0em 0em 0em;
+  background-image: url("../asfalt-light.png");
+  margin: 0em 0em 2em 0em;
+}
+.avatar {
+  width: 180px;
+  height: 180px;
+}
+.img {
+  width: 100%;
+  height: 100%;
+}
+.name {
+  height: 40px;
+  margin: 0;
+  font-weight: 300;
+  text-align: center;
+}
+.name > b {
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 1024px) {
+
+  #main-page {
+    margin: 10em 3em 3em 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .main-header {
+    width: 33.3%;
+    padding: 0em;
+    margin: 0em 2em 2em 0em;
+  }
+
+}

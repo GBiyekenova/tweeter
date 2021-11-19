@@ -1,0 +1,126 @@
+
+.count {
+  float: right;
+}
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  width: 100%;
+}
+
+.new-tweet form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%; 
+}
+.new-tweet form textarea {
+  margin-bottom: 20px;
+  border: none;
+  resize: none;
+  background-color: #f4f1ec;
+  border-bottom: black 3px solid;
+  font-weight: 600;
+}
+.new-tweet form label {
+  font-weight: 600;
+}
+.actions{
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+}
+.actions button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-family: 'Bungee', cursive;
+  border-radius: 4px;
+}
+.form-red {
+  color: red;
+}
+.tweet {
+  border: black 3px solid;
+  margin: 1em 0em;
+}
+.tweet-text {
+  word-break: break-word;
+}
+#tweet-text:focus {
+  outline: none;
+}
+.tweet:hover {
+  box-shadow: 5px 10px;
+}
+.header {
+  background-color: #f4f1ec;
+  height: 100px;
+  width: 100%;
+  padding: 1em 1em 0em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.left-side-header {
+  display: flex;
+  flex-direction: row;
+}
+.image {
+  padding: 0em 1em 0em 0em;
+}
+.tweet-text {
+  border-bottom: black 3px solid;
+  width: 95%;
+  margin: auto;
+  padding: 1em;
+  
+}
+footer {
+  margin-left:auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em 1em 1em 1em;
+}
+.flags-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.flags{
+  margin-left:10px;
+}
+
+.flags:hover {
+  color: yellow;
+
+}
+.empty-tweet{
+  border: red 3px solid;
+  padding: 0.3em;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: center;
+  display: none;
+  margin: 0em 0em 1em 0em;
+  background-color: pink;
+
+}
+
+.long-tweet{
+  border: red 3px solid;
+  padding: 0.3em;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: center;
+  display: none;
+  margin: 0em 0em 1em 0em;
+  background-color: pink;
+
+}
+.fas {
+  padding: 0em 0.5em;
+}
